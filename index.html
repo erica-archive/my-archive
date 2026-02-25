@@ -79,11 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentItem = null;
   let offsetX = 0;
   let offsetY = 0;
+  let hasMoved = false;
 
   document.querySelectorAll('.collage-item').forEach(item => {
 
     item.addEventListener('mousedown', (e) => {
       currentItem = item;
+      hasMoved = false;
 
       const rect = item.getBoundingClientRect();
 
@@ -94,10 +96,19 @@ document.addEventListener("DOMContentLoaded", () => {
       item.style.cursor = "grabbing";
     });
 
+    // Prevent navigation ONLY if dragged
+    item.addEventListener('click', (e) => {
+      if (hasMoved) {
+        e.preventDefault();
+      }
+    });
+
   });
 
   document.addEventListener('mousemove', (e) => {
     if (!currentItem) return;
+
+    hasMoved = true;
 
     currentItem.style.left = (e.clientX - offsetX) + 'px';
     currentItem.style.top = (e.clientY - offsetY) + 'px';
