@@ -3,28 +3,16 @@
    Change these to restyle everything!
 =========================== */
 :root {
-  --bg:          #f6f1ea;
-  --bg-card:     #fffaf4;
-  --text:        #3a3530;
-  --text-muted:  #8c8278;
-  --accent:      #c97b84;  /* dusty rose */
-  --accent-2:    #7c9a92;  /* muted sage */
-  --border:      #e6ddd2;
-  --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+  --bg:          #F2EDE3;  /* warm cream */
+  --bg-card:     #FBF6EE;  /* soft parchment */
+  --text:        #2F4A3F;  /* deep moss */
+  --text-muted:  #6F8F7A;  /* muted sage */
+  --accent:      #8A9B6E;  /* soft olive */
+  --accent-2:    #3E6E73;  /* muted teal */
+  --border:      #E4DCD1;  /* warm light neutral */
+  --shadow-soft: 0 12px 30px rgba(47, 74, 63, 0.12);
 }
 
-/* DARK MODE — these override the variables above */
-body.dark {
-  --bg:          #1a1814;
-  --bg-card:     #242018;
-  --bg-nav:      #1e1c18;
-  --text:        #e8e0d0;
-  --text-muted:  #8a8278;
-  --accent:      #d4784a;
-  --accent-2:    #6aaa9a;
-  --border:      #353028;
-  --shadow:      0 2px 16px rgba(0,0,0,0.4);
-}
 
 /* ===========================
    RESET & BASE
