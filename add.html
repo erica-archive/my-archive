@@ -176,19 +176,18 @@
 
       try {
         // Generate a unique ID for this entry
-        const entryId = crypto.randomUUID();
+   
 
         // Upload photo first (if there is one)
         let photoPath = null;
         if (entryType === 'photo' && selectedFile) {
           this.textContent = 'Uploading photo...';
-          photoPath = await uploadPhotoAndGetPath(entryId, selectedFile);
+          photoPath = await uploadPhotoAndGetPath(selectedFile);
         }
 
         // Save entry to database
         this.textContent = 'Saving entry...';
         const { error } = await db.from('entries').insert({
-          id:         entryId,
           title:      title,
           type:       entryType,
           content:    document.getElementById('entryContent').value.trim(),
