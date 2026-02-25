@@ -37,7 +37,6 @@
     const params  = new URLSearchParams(window.location.search);
     const entryId = params.get('id');
     const card    = document.getElementById('viewCard');
-    const typeEmoji = { note: '📝', blog: '✍️', link: '🔗', photo: '📷' };
 
     async function loadEntry() {
       if (!entryId) {
