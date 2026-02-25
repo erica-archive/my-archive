@@ -14,17 +14,14 @@ const BUCKET = 'photos';
 // id:   the entry ID (used as the filename)
 // file: the File object from the file input
 async function uploadPhotoAndGetPath(file) {
-  const extension = 'webp'; // convert to webp for performance
+  const extension = file.name.split('.').pop().toLowerCase();
   const randomId  = crypto.randomUUID();
   const path      = `${randomId}.${extension}`;
 
-  // Resize image before upload
-  const resizedBlob = await resizeImage(file, 1600); // max width 1600px
-
   const { error } = await db.storage
     .from(BUCKET)
-    .upload(path, resizedBlob, {
-      contentType: 'image/webp',
+    .upload(path, file, {
+      contentType: file.type,
       upsert: true
     });
 
@@ -61,26 +58,6 @@ async function deletePhoto(id) {
   if (error) console.warn('Could not delete photo (may not exist):', error);
 }
 
-//helper function
-async function resizeImage(file, maxWidth) {
-  const img = document.createElement('img');
-  img.src = URL.createObjectURL(file);
-
-  await new Promise(resolve => img.onload = resolve);
-
-  const canvas = document.createElement('canvas');
-  const scale  = maxWidth / img.width;
-
-  canvas.width  = img.width > maxWidth ? maxWidth : img.width;
-  canvas.height = img.width > maxWidth ? img.height * scale : img.height;
-
-  const ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-  return new Promise(resolve => {
-    canvas.toBlob(resolve, 'image/webp', 0.8); // 80% quality
-  });
-}
 
 // --- Upload photo and return its storage path ---
 // This is what add.html calls — it returns the path
