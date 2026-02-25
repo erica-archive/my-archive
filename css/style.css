@@ -3,19 +3,14 @@
    Change these to restyle everything!
 =========================== */
 :root {
-  --bg:          #f5f0e8;
-  --bg-card:     #fffdf8;
-  --bg-nav:      #fffdf8;
-  --text:        #2c2a26;
-  --text-muted:  #7a7570;
-  --accent:      #b85c2c;
-  --accent-2:    #4a7c6f;
-  --border:      #e0d9cc;
-  --shadow:      0 2px 12px rgba(0,0,0,0.07);
-  --radius:      10px;
-  --font-body:   'Lora', Georgia, serif;
-  --font-mono:   'DM Mono', 'Courier New', monospace;
-  --transition:  0.2s ease;
+  --bg:          #f6f1ea;
+  --bg-card:     #fffaf4;
+  --text:        #3a3530;
+  --text-muted:  #8c8278;
+  --accent:      #c97b84;  /* dusty rose */
+  --accent-2:    #7c9a92;  /* muted sage */
+  --border:      #e6ddd2;
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* DARK MODE — these override the variables above */
@@ -112,65 +107,95 @@ a:hover { text-decoration: underline; }
 }
 
 /* ===========================
-   HERO / HEADER
-=========================== */
-.hero {
-  text-align: center;
-  padding: 3.5rem 1.5rem 2rem;
-}
-.hero {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-}
-
-.hero h1 {
-  font-family: 'Lora', serif;
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
-}
-
-.hero .subtitle {
-  color: var(--text-muted);
-  font-style: italic;
-  margin: 0.5rem 0 1.8rem;
-  font-size: 1rem;
-}
-
-/* ===========================
-   COLLAGE HERO (Erica's Archive)
+   ERICA'S ARCHIVE HERO
 =========================== */
 
 .hero-collage {
   position: relative;
-  height: 520px;
-  background: #f7f3ea; /* soft paper tone */
-  overflow: hidden;
+  height: 560px;
+  background: #f6f1ea;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-<section class="hero-collage">
-  <h1 class="archive-title">Erica’s Archive</h1>
 
-  <a href="locals.html" class="collage-item item-camera">
-    <img src="images/camera.png" alt="The Locals">
-  </a>
+/* Title */
+.archive-title {
+  font-family: 'Lora', serif;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  color: var(--text);
+  z-index: 3;
+  text-align: center;
+  position: relative;
+}
 
-  <a href="journal.html" class="collage-item item-envelope">
-    <img src="images/envelope.png" alt="Journal">
-  </a>
+/* Soft underline detail */
+.archive-title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 6px;
+  background: var(--accent);
+  margin: 18px auto 0;
+  border-radius: 20px;
+  opacity: 0.4;
+}
 
-  <a href="gallery.html" class="collage-item item-film">
-    <img src="images/film.png" alt="Gallery">
-  </a>
+/* Collage buttons */
+.collage-item {
+  position: absolute;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  animation: float 7s ease-in-out infinite;
+}
 
-  <a href="contact.html" class="collage-item item-flower">
-    <img src="images/flower.png" alt="Contact">
-  </a>
-</section>
+.collage-item img {
+  width: 170px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+}
+
+/* Hover: feel like picking up paper */
+.collage-item:hover {
+  transform: scale(1.1) rotate(0deg);
+  filter: brightness(1.05);
+  z-index: 5;
+}
+
+/* Placement (intentionally imperfect) */
+.item-camera {
+  top: 70px;
+  left: 12%;
+  transform: rotate(-9deg);
+}
+
+.item-envelope {
+  top: 80px;
+  right: 14%;
+  transform: rotate(7deg);
+}
+
+.item-film {
+  bottom: 80px;
+  left: 18%;
+  transform: rotate(5deg);
+}
+
+.item-flower {
+  bottom: 90px;
+  right: 16%;
+  transform: rotate(-6deg);
+}
+
+/* Gentle float animation */
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
+  50%  { transform: translateY(-8px) rotate(var(--rotation, 0deg)); }
+  100% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
+}
 
 /* Main Title */
 .archive-title {
