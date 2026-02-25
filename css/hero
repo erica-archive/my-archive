@@ -114,36 +114,26 @@ a:hover { text-decoration: underline; }
 /* ===========================
    HERO / HEADER
 =========================== */
-.hero {
-  text-align: center;
-  padding: 3.5rem 1.5rem 2rem;
-}
-.hero {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-}
-.hero img.decor-1 {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-  transform: rotate(-8deg);
-}
+<section class="hero-collage">
+  <h1 class="archive-title">Erica’s Archive</h1>
 
-.hero h1 {
-  font-family: 'Lora', serif;
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
-}
+  <!-- Floating Image Buttons -->
+  <a href="locals.html" class="collage-item item-1">
+    <img src="images/camera.png" alt="The Locals">
+  </a>
 
-.hero .subtitle {
-  color: var(--text-muted);
-  font-style: italic;
-  margin: 0.5rem 0 1.8rem;
-  font-size: 1rem;
-}
+  <a href="settings.html" class="collage-item item-2">
+    <img src="images/envelope.png" alt="The Settings">
+  </a>
+
+  <a href="entries.html" class="collage-item item-3">
+    <img src="images/record.png" alt="Entries">
+  </a>
+
+  <a href="contact.html" class="collage-item item-4">
+    <img src="images/cherries.png" alt="Contact">
+  </a>
+</section>
 
 /* ===========================
    SEARCH BAR
