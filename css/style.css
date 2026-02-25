@@ -120,151 +120,82 @@ a:hover { text-decoration: underline; }
    ERICA'S ARCHIVE HERO
 =========================== */
 
+/* ===========================
+   MESSY SCRAPBOOK HERO
+=========================== */
+
 .hero-collage {
   position: relative;
-  height: 560px;
+  height: 600px;
   background: #f6f1ea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
-/* Title */
+/* Title slightly off-center */
 .archive-title {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-1deg);
   font-family: 'Lora', serif;
   font-size: 5rem;
   font-weight: 400;
-  letter-spacing: -1.5px;
-  color: var(--text);
-  z-index: 3;
+  color: #3a3530;
+  z-index: 2;
   text-align: center;
-  position: relative;
 }
 
-/* Soft underline detail */
-.archive-title::after {
-  content: "";
-  display: block;
-  width: 180px;
-  height: 6px;
-  background: var(--accent);
-  margin: 18px auto 0;
-  border-radius: 20px;
-  opacity: 0.4;
-}
-
-/* Collage buttons */
+/* Collage items */
 .collage-item {
   position: absolute;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  animation: float 7s ease-in-out infinite;
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+.collage-item:active {
+  cursor: grabbing;
 }
 
 .collage-item img {
-  width: 170px;
-  border-radius: 14px;
-  box-shadow: var(--shadow-soft);
-  cursor: pointer;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow:
+    0 12px 20px rgba(0,0,0,0.08),
+    0 2px 6px rgba(0,0,0,0.06);
 }
 
-/* Hover: feel like picking up paper */
+/* Hover = slight lift */
 .collage-item:hover {
-  transform: scale(1.1) rotate(0deg);
-  filter: brightness(1.05);
+  transform: scale(1.04);
   z-index: 5;
 }
 
-/* Placement (intentionally imperfect) */
+/* INTENTIONALLY IMPERFECT PLACEMENT */
+
 .item-camera {
-  top: 70px;
-  left: 12%;
-  transform: rotate(-9deg);
+  top: 90px;
+  left: 8%;
+  transform: rotate(-14deg);
 }
 
 .item-envelope {
-  top: 80px;
-  right: 14%;
-  transform: rotate(7deg);
+  top: 40px;
+  right: 18%;
+  transform: rotate(11deg);
 }
 
 .item-film {
-  bottom: 80px;
-  left: 18%;
-  transform: rotate(5deg);
-}
-
-.item-flower {
-  bottom: 90px;
-  right: 16%;
-  transform: rotate(-6deg);
-}
-
-/* Gentle float animation */
-@keyframes float {
-  0%   { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
-  50%  { transform: translateY(-8px) rotate(var(--rotation, 0deg)); }
-  100% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
-}
-
-/* Main Title */
-.archive-title {
-  font-family: 'Lora', serif;
-  font-size: 4.5rem;
-  font-weight: 400;
-  color: #2c2a26;
-  text-align: center;
-  z-index: 2;
-  letter-spacing: -1px;
-}
-
-/* Floating collage items */
-.collage-item {
-  position: absolute;
-  display: block;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  z-index: 1;
-}
-
-.collage-item img {
-  width: 160px;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-/* Hover effect */
-.collage-item:hover {
-  transform: scale(1.08) rotate(0deg);
-  filter: brightness(1.05);
-  z-index: 3;
-}
-
-/* Individual placements (adjust as you like) */
-.item-1 {
-  top: 80px;
-  left: 12%;
-  transform: rotate(-8deg);
-}
-
-.item-2 {
-  top: 60px;
-  right: 15%;
+  bottom: 120px;
+  left: 22%;
   transform: rotate(6deg);
 }
 
-.item-3 {
-  bottom: 60px;
-  left: 20%;
-  transform: rotate(4deg);
+.item-flower {
+  bottom: 70px;
+  right: 10%;
+  transform: rotate(-18deg);
 }
 
-.item-4 {
-  bottom: 80px;
-  right: 18%;
-  transform: rotate(-6deg);
-}
 
 /* ===========================
    SEARCH BAR
