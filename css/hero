@@ -136,6 +136,79 @@ a:hover { text-decoration: underline; }
 </section>
 
 /* ===========================
+   COLLAGE HERO (Erica's Archive)
+=========================== */
+
+.hero-collage {
+  position: relative;
+  height: 520px;
+  background: #f7f3ea; /* soft paper tone */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Title */
+.archive-title {
+  font-family: 'Lora', serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  color: #2c2a26;
+  text-align: center;
+  z-index: 2;
+  letter-spacing: -1px;
+}
+
+/* Floating collage items */
+.collage-item {
+  position: absolute;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  z-index: 1;
+}
+
+.collage-item img {
+  width: 160px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Hover effect */
+.collage-item:hover {
+  transform: scale(1.08) rotate(0deg);
+  filter: brightness(1.05);
+  z-index: 3;
+}
+
+/* Individual placements (adjust as you like) */
+.item-1 {
+  top: 80px;
+  left: 12%;
+  transform: rotate(-8deg);
+}
+
+.item-2 {
+  top: 60px;
+  right: 15%;
+  transform: rotate(6deg);
+}
+
+.item-3 {
+  bottom: 60px;
+  left: 20%;
+  transform: rotate(4deg);
+}
+
+.item-4 {
+  bottom: 80px;
+  right: 18%;
+  transform: rotate(-6deg);
+}
+
+/* ===========================
    SEARCH BAR
 =========================== */
 .search-wrapper {
