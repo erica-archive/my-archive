@@ -117,21 +117,20 @@ a:hover { text-decoration: underline; }
 <section class="hero-collage">
   <h1 class="archive-title">Erica’s Archive</h1>
 
-  <!-- Floating Image Buttons -->
-  <a href="locals.html" class="collage-item item-1">
+  <a href="locals.html" class="collage-item item-camera">
     <img src="images/camera.png" alt="The Locals">
   </a>
 
-  <a href="settings.html" class="collage-item item-2">
-    <img src="images/envelope.png" alt="The Settings">
+  <a href="journal.html" class="collage-item item-envelope">
+    <img src="images/envelope.png" alt="Journal">
   </a>
 
-  <a href="entries.html" class="collage-item item-3">
-    <img src="images/record.png" alt="Entries">
+  <a href="gallery.html" class="collage-item item-film">
+    <img src="images/film.png" alt="Gallery">
   </a>
 
-  <a href="contact.html" class="collage-item item-4">
-    <img src="images/cherries.png" alt="Contact">
+  <a href="contact.html" class="collage-item item-flower">
+    <img src="images/flower.png" alt="Contact">
   </a>
 </section>
 
