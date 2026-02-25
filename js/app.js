@@ -40,16 +40,17 @@ async function getEntries() {
   }
 
   // Convert from Supabase format to our app format
-  return data.map(row => ({
-    id:       row.id,
-    title:    row.title,
-    type:     row.type,
-    content:  row.content,
-    url:      row.url,
-    hasPhoto: row.has_photo,
-    tags:     row.tags ? row.tags.split(',').filter(t => t !== '') : [],
-    date:     row.date
-  }));
+return data.map(row => ({
+  id:        row.id,
+  title:     row.title,
+  type:      row.type,
+  content:   row.content,
+  url:       row.url,
+  hasPhoto:  row.has_photo,
+  photoPath: row.photo_path,   // ✅ ADD THIS
+  tags:      row.tags ? row.tags.split(',').filter(t => t !== '') : [],
+  date:      row.date
+}));
 }
 
 // --- Delete an entry ---
@@ -121,7 +122,7 @@ async function renderCards(entriesToShow) {
   // Load photos in background — they pop in when ready
   for (const entry of entriesToShow) {
     if (!entry.hasPhoto) continue;
-    const url = getPhotoUrl(entry.id);
+    const url = getPhotoUrlFromPath(entry.photoPath);
     const placeholder = document.getElementById(`photo-${entry.id}`);
     if (url && placeholder) {
       const img = document.createElement('img');
