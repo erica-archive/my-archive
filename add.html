@@ -196,8 +196,7 @@
           photo_path: photoPath,
           tags:       document.getElementById('entryTags').value
                         .split(',').map(t => t.trim().toLowerCase()).filter(t => t !== '').join(','),
-          date:       new Date().toLocaleDateString('en-US', {
-                        year: 'numeric', month: 'short', day: 'numeric'
+          date: new Date().toISOString()
                       })
         });
 
