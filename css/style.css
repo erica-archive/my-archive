@@ -174,28 +174,41 @@ a:hover { text-decoration: underline; }
 
 .item-camera {
   top: 90px;
-  left: 8%;
-  transform: rotate(-14deg);
+  left: 80px;
 }
 
 .item-envelope {
   top: 40px;
-  right: 18%;
-  transform: rotate(11deg);
+  left: 900px;
 }
 
 .item-film {
-  bottom: 120px;
-  left: 22%;
-  transform: rotate(6deg);
+  top: 350px;
+  left: 300px;
 }
 
 .item-flower {
-  bottom: 70px;
-  right: 10%;
-  transform: rotate(-18deg);
+  top: 400px;
+  left: 1050px;
 }
 
+//ROTATION 
+
+.item-camera img {
+  transform: rotate(-14deg);
+}
+
+.item-envelope img {
+  transform: rotate(11deg);
+}
+
+.item-film img {
+  transform: rotate(6deg);
+}
+
+.item-flower img {
+  transform: rotate(-18deg);
+}
 
 /* ===========================
    SEARCH BAR
