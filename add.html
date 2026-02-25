@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Entry — My Archive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">📚 My Archive</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="add.html" class="active">+ Add Entry</a>
+      <button id="themeToggle" class="theme-btn" title="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+
+  <main class="container form-page">
+    <div class="form-card">
+      <h2>New Entry</h2>
+      <p class="form-hint">Fill in what you'd like to save. Only the title is required.</p>
+
+      <div class="form-group">
+        <label for="entryTitle">Title *</label>
+        <input type="text" id="entryTitle" placeholder="Give this entry a name..." required />
+      </div>
+
+      <div class="form-group">
+        <label for="entryType">Type</label>
+        <select id="entryType">
+          <option value="note">📝 Note</option>
+          <option value="blog">✍️ Blog Post</option>
+          <option value="link">🔗 Link</option>
+          <option value="photo">📷 Photo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="entryContent">Content / Notes</label>
+        <textarea id="entryContent" rows="6" placeholder="Write your thoughts, paste text, or add a description..."></textarea>
+      </div>
+
+      <div class="form-group" id="urlGroup" style="display:none;">
+        <label for="entryUrl">URL</label>
+        <input type="url" id="entryUrl" placeholder="https://example.com" />
+      </div>
+
+      <div class="form-group" id="photoGroup" style="display:none;">
+        <label>Photo</label>
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="photoFile" accept="image/*" style="display:none;" />
+          <div class="upload-prompt" id="uploadPrompt">
+            <span class="upload-icon">🖼️</span>
+            <p>Click to choose a photo</p>
+            <p class="form-hint">or drag and drop here</p>
+            <p class="form-hint">JPG, PNG, GIF, WebP supported</p>
+          </div>
+          <div class="upload-preview" id="uploadPreview" style="display:none;">
+            <img id="previewImg" src="" alt="Preview" />
+            <button type="button" class="remove-photo-btn" id="removePhoto">✕ Remove</button>
+          </div>
+        </div>
+        <p class="form-hint" id="fileSizeNote" style="display:none;"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="entryTags">
+          Tags <span class="form-hint">(comma separated, e.g. idea, reading, work)</span>
+        </label>
+        <input type="text" id="entryTags" placeholder="idea, book, work..." />
+      </div>
+
+      <div class="form-actions">
+        <button id="saveBtn" class="btn-primary">Save Entry ✓</button>
+        <a href="index.html" class="btn-secondary">Cancel</a>
+      </div>
+
+      <div class="success-msg" id="successMsg" style="display:none;">
+        ✅ Entry saved! <a href="index.html">Go back to archive →</a>
+      </div>
+      <div class="error-msg" id="errorMsg" style="display:none;"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Built with ♥ — your personal second brain.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/photos.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Show/hide fields by type
+    const typeSelect = document.getElementById('entryType');
+    const urlGroup   = document.getElementById('urlGroup');
+    const photoGroup = document.getElementById('photoGroup');
+
+    typeSelect.addEventListener('change', function () {
+      urlGroup.style.display   = this.value === 'link'  ? 'block' : 'none';
+      photoGroup.style.display = this.value === 'photo' ? 'block' : 'none';
+    });
+
+    // Photo upload
+    const uploadArea    = document.getElementById('uploadArea');
+    const photoFile     = document.getElementById('photoFile');
+    const uploadPrompt  = document.getElementById('uploadPrompt');
+    const uploadPreview = document.getElementById('uploadPreview');
+    const previewImg    = document.getElementById('previewImg');
+    const removePhoto   = document.getElementById('removePhoto');
+    const fileSizeNote  = document.getElementById('fileSizeNote');
+    let selectedFile    = null;
+
+    uploadArea.addEventListener('click', function (e) {
+      if (e.target === removePhoto) return;
+      if (uploadPreview.style.display === 'block') return;
+      photoFile.click();
+    });
+
+    photoFile.addEventListener('change', function () {
+      const file = this.files[0];
+      if (!file) return;
+      selectedFile = file;
+      showPreview(file);
+    });
+
+    function showPreview(file) {
+      const sizeMB = (file.size / 1024 / 1024).toFixed(1);
+      fileSizeNote.style.color   = file.size > 15 * 1024 * 1024 ? 'var(--accent)' : 'var(--text-muted)';
+      fileSizeNote.textContent   = `📁 ${sizeMB} MB${file.size > 15 * 1024 * 1024 ? ' — ⚠️ Very large, consider resizing.' : ''}`;
+      fileSizeNote.style.display = 'block';
+      previewImg.src = URL.createObjectURL(file);
+      uploadPrompt.style.display  = 'none';
+      uploadPreview.style.display = 'block';
+    }
+
+    removePhoto.addEventListener('click', function (e) {
+      e.stopPropagation();
+      selectedFile = null;
+      photoFile.value = '';
+      previewImg.src  = '';
+      uploadPrompt.style.display  = 'block';
+      uploadPreview.style.display = 'none';
+      fileSizeNote.style.display  = 'none';
+    });
+
+    uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+    uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+    uploadArea.addEventListener('drop', function (e) {
+      e.preventDefault();
+      this.classList.remove('drag-over');
+      const file = e.dataTransfer.files[0];
+      if (file && file.type.startsWith('image/')) { selectedFile = file; showPreview(file); }
+    });
+
+    // Save entry
+    document.getElementById('saveBtn').addEventListener('click', async function () {
+      const title = document.getElementById('entryTitle').value.trim();
+      if (!title) { alert('Please enter a title!'); return; }
+
+      const entryType = typeSelect.value;
+      if (entryType === 'photo' && !selectedFile) {
+        alert('Please choose a photo to upload!');
+        return;
+      }
+
+      this.disabled    = true;
+      this.textContent = 'Saving...';
+
+      const errorMsg = document.getElementById('errorMsg');
+      errorMsg.style.display = 'none';
+
+      try {
+        // Generate a unique ID for this entry
+        const entryId = crypto.randomUUID();
+
+        // Upload photo first (if there is one)
+        let photoPath = null;
+        if (entryType === 'photo' && selectedFile) {
+          this.textContent = 'Uploading photo...';
+          photoPath = await uploadPhotoAndGetPath(entryId, selectedFile);
+        }
+
+        // Save entry to database
+        this.textContent = 'Saving entry...';
+        const { error } = await db.from('entries').insert({
+          id:         entryId,
+          title:      title,
+          type:       entryType,
+          content:    document.getElementById('entryContent').value.trim(),
+          url:        document.getElementById('entryUrl').value.trim(),
+          has_photo:  !!photoPath,
+          photo_path: photoPath,
+          tags:       document.getElementById('entryTags').value
+                        .split(',').map(t => t.trim().toLowerCase()).filter(t => t !== '').join(','),
+          date:       new Date().toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'short', day: 'numeric'
+                      })
+        });
+
+        if (error) throw error;
+
+        document.getElementById('successMsg').style.display = 'block';
+        this.textContent = 'Saved!';
+
+      } catch (err) {
+        console.error(err);
+        this.disabled    = false;
+        this.textContent = 'Save Entry ✓';
+        errorMsg.textContent   = '❌ Something went wrong: ' + (err.message || 'Please try again.');
+        errorMsg.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

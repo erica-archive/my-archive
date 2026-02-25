@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Archive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">📚 My Archive</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="add.html">+ Add Entry</a>
+      <button id="themeToggle" class="theme-btn" title="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>My Digital Library</h1>
+    <p class="subtitle">A private space for thoughts, links, notes, and photos.</p>
+    <div class="search-wrapper">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-bar"
+        placeholder="Search your archive..."
+        autocomplete="off"
+      />
+      <span class="search-icon">🔍</span>
+    </div>
+  </header>
+
+  <!-- FILTER TAGS -->
+  <section class="filter-section">
+    <span class="filter-label">Filter by type:</span>
+    <div class="filter-tags" id="filterTags">
+      <button class="tag-btn active" data-filter="all">All</button>
+      <button class="tag-btn" data-filter="note">📝 Note</button>
+      <button class="tag-btn" data-filter="blog">✍️ Blog</button>
+      <button class="tag-btn" data-filter="link">🔗 Link</button>
+      <button class="tag-btn" data-filter="photo">📷 Photo</button>
+    </div>
+  </section>
+
+  <!-- ENTRIES GRID -->
+  <main class="container">
+    <div class="entries-grid" id="entriesGrid"></div>
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <p>✨ Your archive is empty.</p>
+      <a href="add.html" class="btn-primary">Add your first entry →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Built with ♥ — your personal second brain.</p>
+  </footer>
+
+  <!-- Supabase library (loaded from CDN — no install needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/photos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
