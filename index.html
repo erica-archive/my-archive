@@ -71,5 +71,32 @@
   <script src="js/theme.js"></script>
   <script src="js/photos.js"></script>
   <script src="js/app.js"></script>
+
+///draggable element code
+
+<script>
+document.querySelectorAll('.collage-item').forEach(item => {
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  item.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - item.offsetLeft;
+    offsetY = e.clientY - item.offsetTop;
+    item.style.zIndex = 10;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    item.style.left = (e.clientX - offsetX) + 'px';
+    item.style.top = (e.clientY - offsetY) + 'px';
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+});
+</script>
+  
 </body>
 </html>
