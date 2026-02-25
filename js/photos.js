@@ -63,17 +63,27 @@ async function deletePhoto(id) {
 // --- Upload photo and return its storage path ---
 // This is what add.html calls — it returns the path
 // so we can store it in the entry record
-async function uploadPhotoAndGetPath(id, file) {
+async function uploadPhotoAndGetPath(file) {
+  // Get file extension (jpg, png, etc.)
   const extension = file.name.split('.').pop().toLowerCase();
-  const path      = `${id}.${extension}`;
 
+  // Generate a random filename (NOT database ID)
+  const randomId = crypto.randomUUID();
+
+  // Create storage path
+  const path = `${randomId}.${extension}`;
+
+  // Upload to Supabase Storage
   const { error } = await db.storage
     .from(BUCKET)
     .upload(path, file, { upsert: true });
 
   if (error) throw error;
+
+  // Return the storage path so we can save it in the database
   return path;
-}
+};
+
 
 // --- Get public URL from a stored path ---
 function getPhotoUrlFromPath(path) {
