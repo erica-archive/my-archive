@@ -14,8 +14,20 @@ const BUCKET = 'photos';
 // id:   the entry ID (used as the filename)
 // file: the File object from the file input
 async function uploadPhotoAndGetPath(file) {
-  alert('Upload function is running');
-  return 'test.jpg';
+  const extension = file.name.split('.').pop().toLowerCase();
+  const randomId  = crypto.randomUUID();
+  const path      = `${randomId}.${extension}`;
+
+  const { error } = await db.storage
+    .from(BUCKET)
+    .upload(path, file, {
+      contentType: file.type,
+      upsert: true
+    });
+
+  if (error) throw error;
+
+  return path;
 }
 
 // --- Get a public URL for a photo ---
