@@ -114,6 +114,44 @@ a:hover { text-decoration: underline; }
 /* ===========================
    HERO / HEADER
 =========================== */
+.hero {
+  text-align: center;
+  padding: 3.5rem 1.5rem 2rem;
+}
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-family: 'Lora', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+}
+
+.hero .subtitle {
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0.5rem 0 1.8rem;
+  font-size: 1rem;
+}
+
+/* ===========================
+   COLLAGE HERO (Erica's Archive)
+=========================== */
+
+.hero-collage {
+  position: relative;
+  height: 520px;
+  background: #f7f3ea; /* soft paper tone */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 <section class="hero-collage">
   <h1 class="archive-title">Erica’s Archive</h1>
 
@@ -133,20 +171,6 @@ a:hover { text-decoration: underline; }
     <img src="images/flower.png" alt="Contact">
   </a>
 </section>
-
-/* ===========================
-   COLLAGE HERO (Erica's Archive)
-=========================== */
-
-.hero-collage {
-  position: relative;
-  height: 520px;
-  background: #f7f3ea; /* soft paper tone */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* Main Title */
 .archive-title {
