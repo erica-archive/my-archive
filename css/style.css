@@ -40,7 +40,7 @@ a:hover { text-decoration: underline; }
 
 .archive-title {
   font-family: 'DM Serif Display', serif;
-  font-weight: 400;
+  font-weight: 350;
   letter-spacing: 1px;
   font-size: clamp(3rem, 6vw, 5.5rem);
 }
@@ -169,70 +169,62 @@ a:hover { text-decoration: underline; }
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 .item-camera {
-  top: 120px;
+  top: 80px;   
   left: 8%;
 }
 
 .item-music {
-  top: 70px;
+  top: 40px;   
   right: 22%;
 }
 
-.item-music img {
-  width: 230px;   /* bigger */
-  transform: rotate(14deg);
-}
-
 .item-travel {
-  top: 330px;
+  top: 250px;  
   left: 18%;
   z-index: 2;
 }
 
-.item-travel img {
-  width: 170px;
-  transform: rotate(-12deg);
-}
-
 .item-book {
-  top: 260px;
+  top: 280px;  
   left: 32%;
   z-index: 3;
 }
 
-.item-book img {
-  width: 240px;
-  transform: rotate(6deg);
-}
-
 .item-flower {
-  bottom: 120px;
+  bottom: 170px;   
   left: 10%;
 }
 
-.item-flower img {
-  width: 170px;
-  transform: rotate(-20deg);
-}
-
 .item-shell {
-  top: 200px;
+  top: 160px;  
   right: 12%;
 }
 
-.item-shell img {
-  width: 150px;
-  transform: rotate(22deg);
-}
-
 .item-magazine {
-  bottom: 90px;
+  bottom: 120px; 
   right: 20%;
 }
 
-.item-magazine img {
-  width: 190px;
-  transform: rotate(-16deg);
+.item-filmcanister {
+  top: 140px;
+  left: 20%;
+  z-index: 1;
+}
+
+.item-filmcanister img {
+  width: 110px;
+  transform: rotate(-8deg);
+}
+
+.item-filmstrip {
+  top: 100px;
+  right: 35%;
+  z-index: 1;
+}
+
+.item-filmstrip img {
+  width: 180px;
+  transform: rotate(12deg);
 }
 
 //ROTATION 
