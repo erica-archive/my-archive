@@ -184,13 +184,13 @@ a:hover { text-decoration: underline; }
   transform: rotate(-12deg);
 }
 
-.item-magazine {
+.item-book {
   top: 260px;
   left: 32%;
   z-index: 3;
 }
 
-.item-magazine img {
+.item-book img {
   width: 240px;
   transform: rotate(6deg);
 }
@@ -215,12 +215,12 @@ a:hover { text-decoration: underline; }
   transform: rotate(22deg);
 }
 
-.item-book {
+.item-magazine {
   bottom: 90px;
   right: 20%;
 }
 
-.item-book img {
+.item-magazine img {
   width: 190px;
   transform: rotate(-16deg);
 }
