@@ -125,6 +125,13 @@ a:hover { text-decoration: underline; }
   background: #f6f1ea;
   overflow: hidden;
 }
+.hero-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
 
 /* Title slightly off-center */
 .archive-title {
@@ -173,59 +180,43 @@ a:hover { text-decoration: underline; }
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 .item-camera {
-  top: 22%;
-  left: 8%;
+  transform: translate(-360px, -240px) rotate(-18deg);
 }
 
 .item-filmcanister {
-  top: 34%;
-  left: 30%;
+  transform: translate(-120px, -180px) rotate(-12deg);
   z-index: 2;
 }
+
 .item-music {
-  top: 18%;
-  right: 12%;
+  transform: translate(300px, -260px) rotate(14deg);
 }
 
 .item-filmstrip {
-  top: 36%;
-  right: 28%;
+  transform: translate(120px, -150px) rotate(6deg);
 }
+
 .item-flower {
-  top: 60%;
-  left: 12%;
+  transform: translate(-320px, 80px) rotate(-20deg);
   z-index: 4;
 }
 
 .item-travel {
-  top: 66%;
-  left: 22%;
+  transform: translate(-220px, 140px) rotate(-8deg);
   z-index: 3;
 }
+
 .item-book {
-  top: 65%;
-  left: 48%;
+  transform: translate(40px, 160px) rotate(10deg);
 }
+
 .item-shell {
-  top: 52%;
-  right: 8%;
+  transform: translate(360px, 40px) rotate(24deg);
 }
+
 .item-magazine {
-  top: 72%;
-  right: 20%;
+  transform: translate(220px, 220px) rotate(-6deg);
 }
-
-//ROTATION 
-
-.item-camera img { transform: rotate(-18deg); }
-.item-music img { transform: rotate(14deg); }
-.item-travel img { transform: rotate(-8deg); }
-.item-book img { transform: rotate(10deg); }
-.item-flower img { width: 160px; transform: rotate(-20deg); }
-.item-shell img { width: 130px; transform: rotate(24deg); }
-.item-magazine img { width: 210px; transform: rotate(-6deg); }
-.item-filmstrip img { transform: rotate(6deg); }
-.item-filmcanister img { transform: rotate(-12deg); }
 
 /* ===========================
    SEARCH BAR
