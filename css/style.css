@@ -165,7 +165,6 @@ a:hover { text-decoration: underline; }
 .collage-item:hover {
   filter: drop-shadow(0 18px 25px rgba(0,0,0,0.25));
 }
-}
 
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
