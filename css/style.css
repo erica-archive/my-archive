@@ -168,40 +168,56 @@ a:hover { text-decoration: underline; }
 
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
+/* TOP ARC */
+.item-shell {
+  top: 10%;
+  left: 30%;
+  transform: rotate(-15deg);
+}
+
 .item-book {
-  top: 5%;
-  left: 18%;
-  transform: rotate(-6deg);
+  top: 12%;
+  left: 45%;
+  transform: rotate(-5deg);
 }
 
 .item-filmcanister {
-  top: 8%;
+  top: 14%;
+  right: 30%;
+  transform: rotate(10deg);
+}
+
+/* RIGHT ARC */
+.item-magazine {
+  top: 40%;
+  right: 10%;
+  transform: rotate(6deg);
+}
+
+.item-camera {
+  bottom: 25%;
   right: 15%;
+  transform: rotate(-6deg);
+}
+
+/* BOTTOM ARC */
+.item-flower {
+  bottom: 12%;
+  left: 45%;
   transform: rotate(8deg);
 }
 
 .item-filmstrip {
-  top: 35%;
-  left: 8%;
+  bottom: 18%;
+  left: 25%;
   transform: rotate(-10deg);
 }
 
-.item-flower {
-  bottom: 18%;
-  left: 15%;
-  transform: rotate(12deg);
-}
-
-.item-magazine {
-  bottom: 12%;
-  right: 20%;
-  transform: rotate(-8deg);
-}
-
-.item-camera {
-  bottom: 8%;
-  right: 8%;
-  transform: rotate(6deg);
+/* LEFT ARC */
+.item-travel {
+  top: 45%;
+  left: 10%;
+  transform: rotate(8deg);
 }
 
 
