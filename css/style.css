@@ -125,26 +125,22 @@ a:hover { text-decoration: underline; }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0;
-  height: 0;
 }
 
 /* Title slightly off-center */
 .archive-title {
   position: absolute;
   transform: translate(-50%, -50%) rotate(-1deg);
-  z-index: 10;
-  text-align: center;
+  white-space: nowrap;
+  line-height: 1.05;
 
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-size: clamp(3.8rem, 6vw, 6rem);
   font-weight: 400;
   letter-spacing: 1px;
 
   color: var(--text);
   z-index: 10;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 /* Collage items */
@@ -167,51 +163,42 @@ a:hover { text-decoration: underline; }
 
 /* Hover = slight lift */
 .collage-item:hover {
-  transform: scale(1.04);
-  z-index: 5;
+  filter: drop-shadow(0 18px 25px rgba(0,0,0,0.25));
+}
 }
 
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 .item-camera {
-  transform: translate(-360px, -240px) rotate(-18deg);
+  transform: translate(-460px, -320px) rotate(-16deg);
 }
-
 .item-filmcanister {
-  transform: translate(-120px, -180px) rotate(-12deg);
+  transform: translate(-200px, -260px) rotate(-10deg);
   z-index: 2;
 }
-
 .item-music {
-  transform: translate(300px, -260px) rotate(14deg);
+  transform: translate(420px, -340px) rotate(14deg);
 }
-
 .item-filmstrip {
-  transform: translate(120px, -150px) rotate(6deg);
+  transform: translate(220px, -250px) rotate(6deg);
 }
-
 .item-flower {
-  transform: translate(-320px, 80px) rotate(-20deg);
+  transform: translate(-420px, 160px) rotate(-18deg);
   z-index: 4;
 }
-
 .item-travel {
-  transform: translate(-220px, 140px) rotate(-8deg);
+  transform: translate(-260px, 220px) rotate(-8deg);
   z-index: 3;
 }
-
 .item-book {
-  transform: translate(40px, 160px) rotate(10deg);
+  transform: translate(40px, 260px) rotate(8deg);
 }
-
 .item-shell {
-  transform: translate(360px, 40px) rotate(24deg);
+  transform: translate(460px, 80px) rotate(22deg);
 }
-
 .item-magazine {
-  transform: translate(220px, 220px) rotate(-6deg);
+  transform: translate(260px, 260px) rotate(-6deg);
 }
-
 /* ===========================
    SEARCH BAR
 =========================== */
