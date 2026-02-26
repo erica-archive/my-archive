@@ -163,19 +163,37 @@ a:hover { text-decoration: underline; }
   left: 80px;
 }
 
-.item-envelope {
+.item-music {
   top: 40px;
   left: 900px;
 }
 
-.item-film {
+.item-travel {
   top: 350px;
   left: 300px;
 }
 
-.item-flower {
+.item-book {
   top: 400px;
   left: 1050px;
+}
+
+/* FLOWER — soft bottom left */
+.item-flower {
+  bottom: 60px;
+  left: 12%;
+}
+
+/* SHELL — upper right accent */
+.item-shell {
+  top: 140px;
+  right: 6%;
+}
+
+/* MAGAZINE — mid-left layered */
+.item-magazine {
+  top: 280px;
+  left: 30%;
 }
 
 //ROTATION 
@@ -184,16 +202,31 @@ a:hover { text-decoration: underline; }
   transform: rotate(-14deg);
 }
 
-.item-envelope img {
+.item-music img {
   transform: rotate(11deg);
 }
 
-.item-film img {
+.item-travel img {
   transform: rotate(6deg);
 }
 
-.item-flower img {
+.item-book img {
   transform: rotate(-18deg);
+}
+
+.item-flower img {
+  width: 160px;
+  transform: rotate(-12deg);
+}
+
+.item-shell img {
+  width: 130px;
+  transform: rotate(18deg);
+}
+
+.item-magazine img {
+  width: 200px;
+  transform: rotate(6deg);
 }
 
 /* ===========================
