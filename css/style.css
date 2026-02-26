@@ -170,35 +170,59 @@ a:hover { text-decoration: underline; }
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 .item-camera {
-  transform: translate(-460px, -320px) rotate(-16deg);
+  top: 8%;
+  left: 8%;
+  transform: rotate(-12deg);
 }
+
 .item-filmcanister {
-  transform: translate(-200px, -260px) rotate(-10deg);
-  z-index: 2;
+  top: 15%;
+  left: 38%;
+  transform: rotate(-10deg);
 }
-.item-music {
-  transform: translate(420px, -340px) rotate(14deg);
-}
+
 .item-filmstrip {
-  transform: translate(220px, -250px) rotate(6deg);
+  top: 12%;
+  left: 58%;
+  transform: rotate(8deg);
 }
-.item-flower {
-  transform: translate(-420px, 160px) rotate(-18deg);
-  z-index: 4;
-}
-.item-travel {
-  transform: translate(-260px, 220px) rotate(-8deg);
-  z-index: 3;
-}
-.item-book {
-  transform: translate(40px, 260px) rotate(8deg);
+
+.item-music {
+  top: 4%;
+  right: 6%;
+  transform: rotate(16deg);
 }
 .item-shell {
-  transform: translate(460px, 80px) rotate(22deg);
+  top: 55%;
+  right: 4%;
+  transform: rotate(20deg);
 }
+.item-flower {
+  bottom: 4%;
+  left: 6%;
+  transform: rotate(-18deg);
+}
+
+.item-travel {
+  bottom: 18%;
+  left: 25%;
+  transform: rotate(-8deg);
+}
+
+.item-book {
+  bottom: 10%;
+  right: 28%;
+  transform: rotate(8deg);
+}
+
 .item-magazine {
-  transform: translate(260px, 260px) rotate(-6deg);
+  bottom: 2%;
+  right: 10%;
+  transform: rotate(-6deg);
 }
+
+
+
 /* ===========================
    SEARCH BAR
 =========================== */
