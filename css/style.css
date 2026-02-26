@@ -139,13 +139,15 @@ a:hover { text-decoration: underline; }
   letter-spacing: 1px;
 
   color: var(--text);
-  z-index: 2;
+  z-index: 10;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Collage items */
 .collage-item {
   position: absolute;
+   z-index: 1;
   cursor: grab;
   transition: transform 0.2s ease;
 }
@@ -169,62 +171,50 @@ a:hover { text-decoration: underline; }
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 .item-camera {
-  top: 80px;   
-  left: 8%;
+  top: 120px;   
+  left: 10%;
 }
 
 .item-music {
-  top: 40px;   
-  right: 22%;
+  top: 110px;   
+  right: 18%;
+}
+
+.item-filmstrip {
+  top: 150px;  
+  right: 35%;
+}
+
+.item-filmcanister {
+  top: 170px;  
+  left: 30%;
+}
+
+.item-flower {
+  top: 260px;  
+  left: 14%;
+  z-index: 3;
 }
 
 .item-travel {
-  top: 250px;  
-  left: 18%;
+  top: 290px;   
+  left: 22%;
   z-index: 2;
 }
 
 .item-book {
-  top: 280px;  
-  left: 32%;
-  z-index: 3;
-}
-
-.item-flower {
-  bottom: 170px;   
-  left: 10%;
+  top: 270px;  
+  left: 45%;
 }
 
 .item-shell {
-  top: 160px;  
-  right: 12%;
+  top: 240px;   
+  right: 10%;
 }
 
 .item-magazine {
-  bottom: 120px; 
-  right: 20%;
-}
-
-.item-filmcanister {
-  top: 140px;
-  left: 20%;
-  z-index: 1;
-}
-
-.item-filmcanister img {
-  width: 110px;
-  transform: rotate(-8deg);
-}
-
-.item-filmstrip {
-  top: 100px;
-  right: 35%;
-  z-index: 1;
-}
-
-.item-filmstrip img {
-  width: 180px;
-  transform: rotate(12deg);
+  top: 360px;   
+  right: 25%;
 }
 
 //ROTATION 
