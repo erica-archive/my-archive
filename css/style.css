@@ -169,55 +169,61 @@ a:hover { text-decoration: underline; }
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 /* TOP ARC */
+.item-music {
+  top: 14%;
+  left: 18%;
+  transform: rotate(-8deg);
+}
+
 .item-shell {
-  top: 10%;
-  left: 30%;
-  transform: rotate(-15deg);
+  top: 18%;
+  left: 36%;
+  transform: rotate(-10deg);
 }
 
 .item-book {
-  top: 12%;
-  left: 45%;
-  transform: rotate(-5deg);
+  top: 16%;
+  right: 34%;
+  transform: rotate(-4deg);
 }
 
 .item-filmcanister {
-  top: 14%;
-  right: 30%;
-  transform: rotate(10deg);
+  top: 20%;
+  right: 18%;
+  transform: rotate(8deg);
 }
 
 /* RIGHT ARC */
 .item-magazine {
-  top: 40%;
-  right: 10%;
+  top: 48%;
+  right: 8%;
   transform: rotate(6deg);
 }
 
 .item-camera {
-  bottom: 25%;
-  right: 15%;
+  bottom: 22%;
+  right: 12%;
   transform: rotate(-6deg);
 }
 
 /* BOTTOM ARC */
 .item-flower {
-  bottom: 12%;
-  left: 45%;
-  transform: rotate(8deg);
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%) rotate(6deg);
 }
 
 .item-filmstrip {
   bottom: 18%;
-  left: 25%;
+  left: 22%;
   transform: rotate(-10deg);
 }
 
 /* LEFT ARC */
 .item-travel {
-  top: 45%;
-  left: 10%;
-  transform: rotate(8deg);
+  top: 48%;
+  left: 8%;
+  transform: rotate(6deg);
 }
 
 
