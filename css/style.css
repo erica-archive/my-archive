@@ -38,7 +38,7 @@ a {
 }
 a:hover { text-decoration: underline; }
 
-h1 {
+.archive-title {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
   letter-spacing: 1px;
