@@ -159,41 +159,70 @@ a:hover { text-decoration: underline; }
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 .item-camera {
-  top: 90px;
-  left: 80px;
+  top: 120px;
+  left: 8%;
 }
 
 .item-music {
-  top: 40px;
-  left: 900px;
+  top: 70px;
+  right: 22%;
+}
+
+.item-music img {
+  width: 230px;   /* bigger */
+  transform: rotate(14deg);
 }
 
 .item-travel {
-  top: 350px;
-  left: 300px;
+  top: 330px;
+  left: 18%;
+  z-index: 2;
+}
+
+.item-travel img {
+  width: 170px;
+  transform: rotate(-12deg);
+}
+
+.item-magazine {
+  top: 260px;
+  left: 32%;
+  z-index: 3;
+}
+
+.item-magazine img {
+  width: 240px;
+  transform: rotate(6deg);
+}
+
+.item-flower {
+  bottom: 120px;
+  left: 10%;
+}
+
+.item-flower img {
+  width: 170px;
+  transform: rotate(-20deg);
+}
+
+.item-shell {
+  top: 200px;
+  right: 12%;
+}
+
+.item-shell img {
+  width: 150px;
+  transform: rotate(22deg);
 }
 
 .item-book {
-  top: 400px;
-  left: 1050px;
+  bottom: 90px;
+  right: 20%;
 }
 
-/* FLOWER — soft bottom left */
-.item-flower {
-  bottom: 60px;
-  left: 12%;
-}
-
-/* SHELL — upper right accent */
-.item-shell {
-  top: 140px;
-  right: 6%;
-}
-
-/* MAGAZINE — mid-left layered */
-.item-magazine {
-  top: 280px;
-  left: 30%;
+.item-book img {
+  width: 190px;
+  transform: rotate(-16deg);
 }
 
 //ROTATION 
