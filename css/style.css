@@ -129,9 +129,11 @@ a:hover { text-decoration: underline; }
 /* Title slightly off-center */
 .archive-title {
   position: absolute;
-  top: 42%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-1deg);
+  z-index: 10;
+  text-align: center;
 
   font-family: 'DM Serif Display', serif;
   font-size: clamp(3.5rem, 6vw, 6rem);
@@ -171,84 +173,59 @@ a:hover { text-decoration: underline; }
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
 .item-camera {
-  top: 120px;   
-  left: 10%;
-}
-
-.item-music {
-  top: 110px;   
-  right: 18%;
-}
-
-.item-filmstrip {
-  top: 150px;  
-  right: 35%;
+  top: 22%;
+  left: 8%;
 }
 
 .item-filmcanister {
-  top: 170px;  
+  top: 34%;
   left: 30%;
+  z-index: 2;
+}
+.item-music {
+  top: 18%;
+  right: 12%;
 }
 
+.item-filmstrip {
+  top: 36%;
+  right: 28%;
+}
 .item-flower {
-  top: 260px;  
-  left: 14%;
-  z-index: 3;
+  top: 60%;
+  left: 12%;
+  z-index: 4;
 }
 
 .item-travel {
-  top: 290px;   
+  top: 66%;
   left: 22%;
-  z-index: 2;
+  z-index: 3;
 }
-
 .item-book {
-  top: 270px;  
-  left: 45%;
+  top: 65%;
+  left: 48%;
 }
-
 .item-shell {
-  top: 240px;   
-  right: 10%;
+  top: 52%;
+  right: 8%;
 }
-
 .item-magazine {
-  top: 360px;   
-  right: 25%;
+  top: 72%;
+  right: 20%;
 }
 
 //ROTATION 
 
-.item-camera img {
-  transform: rotate(-14deg);
-}
-
-.item-music img {
-  transform: rotate(11deg);
-}
-
-.item-travel img {
-  transform: rotate(6deg);
-}
-
-.item-book img {
-  transform: rotate(-18deg);
-}
-
-.item-flower img {
-  width: 160px;
-  transform: rotate(-12deg);
-}
-
-.item-shell img {
-  width: 130px;
-  transform: rotate(18deg);
-}
-
-.item-magazine img {
-  width: 200px;
-  transform: rotate(6deg);
-}
+.item-camera img { transform: rotate(-18deg); }
+.item-music img { transform: rotate(14deg); }
+.item-travel img { transform: rotate(-8deg); }
+.item-book img { transform: rotate(10deg); }
+.item-flower img { width: 160px; transform: rotate(-20deg); }
+.item-shell img { width: 130px; transform: rotate(24deg); }
+.item-magazine img { width: 210px; transform: rotate(-6deg); }
+.item-filmstrip img { transform: rotate(6deg); }
+.item-filmcanister img { transform: rotate(-12deg); }
 
 /* ===========================
    SEARCH BAR
