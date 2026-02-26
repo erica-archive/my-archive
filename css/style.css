@@ -169,56 +169,55 @@ a:hover { text-decoration: underline; }
 
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
-.item-camera {
-  top: 8%;
-  left: 8%;
-  transform: rotate(-12deg);
+.item-magazine {
+  top: 5%;
+  left: 35%;
+  transform: rotate(-6deg);
 }
 
-.item-filmcanister {
-  top: 15%;
-  left: 38%;
-  transform: rotate(-10deg);
+.item-flower {
+  top: 8%;
+  right: 28%;
+  transform: rotate(10deg);
 }
 
 .item-filmstrip {
-  top: 12%;
-  left: 58%;
+  top: 20%;
+  right: 15%;
   transform: rotate(8deg);
-}
-
-.item-music {
-  top: 4%;
-  right: 6%;
-  transform: rotate(16deg);
 }
 .item-shell {
   top: 55%;
-  right: 4%;
-  transform: rotate(20deg);
+  left: 8%;
+  transform: rotate(-15deg);
 }
-.item-flower {
-  bottom: 4%;
-  left: 6%;
-  transform: rotate(-18deg);
+.item-music {
+  top: 50%;
+  right: 5%;
+  transform: rotate(15deg);
+}
+.item-filmcanister {
+  bottom: 10%;
+  left: 40%;
+  transform: rotate(-12deg);
 }
 
-.item-travel {
-  bottom: 18%;
-  left: 25%;
+.item-camera {
+  bottom: 5%;
+  left: 55%;
   transform: rotate(-8deg);
 }
 
-.item-book {
-  bottom: 10%;
-  right: 28%;
-  transform: rotate(8deg);
+.item-travel {
+  bottom: 15%;
+  left: 25%;
+  transform: rotate(-5deg);
 }
 
-.item-magazine {
-  bottom: 2%;
-  right: 10%;
-  transform: rotate(-6deg);
+.item-book {
+  bottom: 8%;
+  right: 20%;
+  transform: rotate(8deg);
 }
 
 
