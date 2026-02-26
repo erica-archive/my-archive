@@ -24,7 +24,7 @@
   <h1 class="archive-title">Erica’s Archive</h1>
 
   <a href="locals.html" class="collage-item item-camera">
-    <img src="https://yioooxntaqmotudonzbz.supabase.co/storage/v1/object/public/photos/canonae1.jpg" alt="The Locals">
+    <img src="https://yioooxntaqmotudonzbz.supabase.co/storage/v1/object/public/photos/canonae1.jpg" alt="Film">
   </a>
 
   <a href="journal.html" class="collage-item item-envelope">
@@ -32,7 +32,7 @@
   </a>
 
   <a href="gallery.html" class="collage-item item-film">
-    <img src="images/film.png" alt="Gallery">
+    <img src="https://yioooxntaqmotudonzbz.supabase.co/storage/v1/object/public/photos/airticket.png" alt="Travel">
   </a>
 
   <a href="contact.html" class="collage-item item-flower">
@@ -71,55 +71,6 @@
   <script src="js/theme.js"></script>
   <script src="js/photos.js"></script>
   <script src="js/app.js"></script>
-
-///DRAGGABLE ELEMENT CODE
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  let currentItem = null;
-  let offsetX = 0;
-  let offsetY = 0;
-  let hasMoved = false;
-
-  document.querySelectorAll('.collage-item').forEach(item => {
-
-    item.addEventListener('mousedown', (e) => {
-      currentItem = item;
-      hasMoved = false;
-
-      const rect = item.getBoundingClientRect();
-
-      offsetX = e.clientX - rect.left;
-      offsetY = e.clientY - rect.top;
-
-      item.style.zIndex = 1000;
-      item.style.cursor = "grabbing";
-    });
-
-    // Prevent navigation ONLY if dragged
-    item.addEventListener('click', (e) => {
-      if (hasMoved) {
-        e.preventDefault();
-      }
-    });
-
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!currentItem) return;
-
-    hasMoved = true;
-
-    currentItem.style.left = (e.clientX - offsetX) + 'px';
-    currentItem.style.top = (e.clientY - offsetY) + 'px';
-  });
-
-  document.addEventListener('mouseup', () => {
-    if (!currentItem) return;
-
-    currentItem.style.cursor = "grab";
-    currentItem = null;
-  });
 
 });
   
