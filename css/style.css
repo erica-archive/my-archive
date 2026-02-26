@@ -130,10 +130,10 @@ a:hover { text-decoration: underline; }
 /* Title slightly off-center */
 .archive-title {
   position: absolute;
-  transform: translate(-50%, -50%) rotate(-1deg);
-  white-space: nowrap;
-  line-height: 1.05;
-
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%); /* remove translateY */
+  
   font-family: 'DM Serif Display', serif;
   font-size: clamp(3.8rem, 6vw, 6rem);
   font-weight: 400;
@@ -168,57 +168,41 @@ a:hover { text-decoration: underline; }
 
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
-.item-magazine {
+.item-book {
   top: 5%;
-  left: 35%;
+  left: 18%;
   transform: rotate(-6deg);
 }
 
-.item-flower {
+.item-filmcanister {
   top: 8%;
-  right: 28%;
-  transform: rotate(10deg);
-}
-
-.item-filmstrip {
-  top: 20%;
   right: 15%;
   transform: rotate(8deg);
 }
-.item-shell {
-  top: 55%;
+
+.item-filmstrip {
+  top: 35%;
   left: 8%;
-  transform: rotate(-15deg);
-}
-.item-music {
-  top: 50%;
-  right: 5%;
-  transform: rotate(15deg);
-}
-.item-filmcanister {
-  bottom: 10%;
-  left: 40%;
-  transform: rotate(-12deg);
+  transform: rotate(-10deg);
 }
 
-.item-camera {
-  bottom: 5%;
-  left: 55%;
+.item-flower {
+  bottom: 18%;
+  left: 15%;
+  transform: rotate(12deg);
+}
+
+.item-magazine {
+  bottom: 12%;
+  right: 20%;
   transform: rotate(-8deg);
 }
 
-.item-travel {
-  bottom: 15%;
-  left: 25%;
-  transform: rotate(-5deg);
-}
-
-.item-book {
+.item-camera {
   bottom: 8%;
-  right: 20%;
-  transform: rotate(8deg);
+  right: 8%;
+  transform: rotate(6deg);
 }
-
 
 
 /* ===========================
