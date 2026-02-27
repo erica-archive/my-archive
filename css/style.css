@@ -176,8 +176,9 @@ a:hover { text-decoration: underline; }
 
 .item-shell {
   top: 18%;
-  right: 20%;
-  transform: translateX(-50%) rotate(7deg);
+  right: 18%;
+  transform: rotate(7deg);
+  z-index: 2;
 }
 
 .item-book {
@@ -195,7 +196,7 @@ a:hover { text-decoration: underline; }
 .item-magazine {
   top: 20%;
   left: 18%;
-  transform: rotate(-8deg);
+  transform: rotate(-8deg) scale(1.1);
 }
 
 .item-camera {
@@ -207,7 +208,8 @@ a:hover { text-decoration: underline; }
 .item-flower {
   bottom: 10%;
   left: 16%;
-  transform: translateX(-50%) rotate(6deg);
+  transform: rotate(6deg);
+  z-index: 2;
 }
 
 .item-filmstrip {
