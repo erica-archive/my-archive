@@ -168,63 +168,78 @@ a:hover { text-decoration: underline; }
 
 /* INTENTIONALLY IMPERFECT PLACEMENT */
 
-/* TOP ARC */
 .item-music {
-  top: 14%;
-  left: 18%;
-  transform: rotate(-8deg);
+  bottom: 7%;
+  left: 30%;
+  transform: rotate(-2deg);
+  width: 140%; 
+  height: auto;
 }
 
 .item-shell {
-  top: 18%;
-  left: 36%;
-  transform: rotate(-10deg);
-}
-
-.item-book {
-  top: 16%;
-  right: 34%;
-  transform: rotate(-4deg);
-}
-
-.item-filmcanister {
-  top: 20%;
-  right: 18%;
+  top: 22%;
+  right: 20%;
   transform: rotate(8deg);
 }
 
-/* RIGHT ARC */
+.item-book {
+  bottom: 11%;
+  right: 12%;
+  transform: rotate(3deg);
+  width: 140%; 
+  height: auto;
+}
+
+.item-filmcanister {
+  bottom: 9%;
+  right: 40%;
+  transform: rotate(8deg);
+  width: 70%; 
+  height: auto;
+}
+
 .item-magazine {
-  top: 48%;
-  right: 8%;
-  transform: rotate(6deg);
+  top: 20%;
+  left: 19%;
+  transform: rotate(-5deg);
 }
 
 .item-camera {
   bottom: 22%;
-  right: 12%;
-  transform: rotate(-6deg);
+  left: 30%;
+  transform: rotate(-5deg);
+  width: 120%; 
+  height: auto;
 }
 
-/* BOTTOM ARC */
 .item-flower {
   bottom: 10%;
-  left: 50%;
+  left: 8%;
   transform: translateX(-50%) rotate(6deg);
 }
 
 .item-filmstrip {
-  bottom: 18%;
-  left: 22%;
-  transform: rotate(-10deg);
+  top: 21%;
+  right: 27%;
+  transform: rotate(-1deg);
+  width: 130%; 
+  height: auto;
 }
 
-/* LEFT ARC */
 .item-travel {
-  top: 48%;
-  left: 8%;
-  transform: rotate(6deg);
+  bottom: 8%;
+  left: 6%;
+  transform: rotate(5deg);
 }
+
+.item-clapperboard {
+  bottom: 10%;
+  right: 25%;
+  transform: rotate(-3deg);
+  width: 130%; 
+  height: auto;
+}
+
 
 
 /* ===========================
