@@ -176,8 +176,8 @@ a:hover { text-decoration: underline; }
 
 .item-shell {
   top: 18%;
-  right: 18%;
-  transform: rotate(7deg);
+  right: 19%;
+  transform: rotate(6deg);
   z-index: 2;
 }
 
@@ -188,20 +188,20 @@ a:hover { text-decoration: underline; }
 }
 
 .item-filmcanister {
-  bottom: 7%;
+  bottom: 6%;
   right: 40%;
-  transform: rotate(8deg) scale(0.7);
+  transform: rotate(10deg) scale(0.7);
 }
 
 .item-magazine {
-  top: 20%;
+  top: 19%;
   left: 18%;
-  transform: rotate(-8deg) scale(1.1);
+  transform: rotate(-10deg) scale(1.1);
 }
 
 .item-camera {
   top: 22%;
-  left: 35%;
+  left: 37%;
   transform: rotate(-5deg) scale(1.3);
 }
 
@@ -213,14 +213,14 @@ a:hover { text-decoration: underline; }
 }
 
 .item-filmstrip {
-  top: 21%;
-  right: 33%;
+  top: 27%;
+  right: 32%;
   transform: rotate(-1deg) scale(1.2);
 }
 
 .item-travel {
   bottom: 9%;
-  left: 12%;
+  left: 10%;
   transform: rotate(5deg);
 }
 
