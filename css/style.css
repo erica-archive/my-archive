@@ -822,13 +822,17 @@ body.dark .success-msg {
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .bookshelf-item img {
   width: 100%;
   height: 260px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  display: block;
+}
+.bookshelf-item img {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
 }
 .bookshelf-item img:hover {
   transform: scale(1.05);
