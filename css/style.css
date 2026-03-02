@@ -813,6 +813,31 @@ body.dark .success-msg {
   margin-top: 3rem;
 }
 
+
+///* === BOOKS PAGE === *///
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.bookshelf-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.bookshelf-item img:hover {
+  transform: scale(1.05);
+}
+.page-hero {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
 /* ===========================
    RESPONSIVE (mobile)
 =========================== */
