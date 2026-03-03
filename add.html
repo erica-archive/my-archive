@@ -197,7 +197,6 @@
           tags:       document.getElementById('entryTags').value
                         .split(',').map(t => t.trim().toLowerCase()).filter(t => t !== '').join(','),
           date: new Date().toISOString()
-                      })
         });
 
         if (error) throw error;
