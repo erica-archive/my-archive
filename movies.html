@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movies | Erica’s Archive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">📚 My Archive</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="add.html">+ Add Entry</a>
+    </div>
+  </nav>
+
+
+<section class="page-hero">
+  <h1>📸 Movies</h1>
+  <p>My favorite movies.</p>
+
+  <div class="movies-grid">
+    <div class="movies-item" data-tag="atonement">
+      <img src="https://yioooxntaqmotudonzbz.supabase.co/storage/v1/object/public/photos/atonement.jpg" alt="Atonement">
+    </div>
+    <div class="movies-item" data-tag="spiritedaway">
+      <img src="https://yioooxntaqmotudonzbz.supabase.co/storage/v1/object/public/photos/spiritedaway.jpg" alt="Spirited Away">
+    </div>
+    <div class="movies-item" data-tag="superbad">
+      <img src="https://yioooxntaqmotudonzbz.supabase.co/storage/v1/object/public/photos/superbad2.jpg" alt="Superbad">
+      </div>
+     <div class="movies-item" data-tag="theworstpersonintheworld">
+      <img src="https://yioooxntaqmotudonzbz.supabase.co/storage/v1/object/public/photos/theworstpersonintheworld.jpg" alt="The Worst Person In The World">
+      </div>
+  </div>
+</section>
+  
+
+  <main class="container">
+    <p>Coming soon ✨</p>
+  </main>
+
+  <footer class="footer">
+    <p>Built with ♥ — your personal second brain.</p>
+  </footer>
+
+<script>
+  const books = document.querySelectorAll('.bookshelf-item');
+  const posts = document.querySelectorAll('.post');
+
+  books.forEach(book => {
+    book.addEventListener('click', () => {
+      const tag = book.dataset.tag;
+
+      posts.forEach(post => {
+        const postTags = post.dataset.tags.split(" ");
+
+        if (postTags.includes(tag)) {
+          post.style.display = "block";
+        } else {
+          post.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+  
+  
+</body>
+</html>
