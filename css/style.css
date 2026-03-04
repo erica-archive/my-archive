@@ -844,6 +844,38 @@ body.dark .success-msg {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
+
+/* ===== MOVIES PAGE ===== */
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.movies-item {
+  width: 100%;
+}
+
+.movies-item img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+.movies-item {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movies-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+
 /* ===========================
    RESPONSIVE (mobile)
 =========================== */
